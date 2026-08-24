@@ -1,0 +1,96 @@
+# ShopPlugin Configuration
+# This is the main configuration file for ShopPlugin
+
+# Database Configuration
+database:
+  # Type: sqlite or mysql
+  type: sqlite
+  
+  # SQLite settings (used when type is sqlite)
+  sqlite:
+    file: shop.db
+  
+  # MySQL settings (used when type is mysql)
+  mysql:
+    host: localhost
+    port: 3306
+    database: shopdb
+    username: root
+    password: password
+    useSSL: false
+
+# Economy Settings
+economy:
+  # Currency symbol displayed in the shop
+  currency-symbol: '$'
+  
+  # Decimal places for prices
+  decimal-places: 2
+  
+  # Auto-load all Minecraft materials with default prices
+  auto-load-items: true
+  
+  # Sell multiplier: sell-price = buy-price * sell-multiplier
+  sell-multiplier: 0.25
+  
+  # Buy multiplier: buy-price = sell-price * buy-multiplier
+  buy-multiplier: 2.0
+
+# Dynamic Pricing Settings
+dynamic-pricing:
+  enabled: true
+  
+  # Impact of selling on price (0.0 - 1.0)
+  sell-impact: 1.0
+  
+  # Impact of buying on price (0.0 - 1.0)
+  buy-impact: 0.5
+  
+  # Maximum price change per transaction (%)
+  max-change-per-transaction: 2
+  
+  # Update interval in seconds
+  update-interval: 60
+  
+  # Price reset settings
+  price-reset:
+    enabled: true
+    # Interval in hours
+    interval: 24
+    # Mode: instant or gradual
+    mode: gradual
+    # Gradual reset speed (% per update)
+    gradual-speed: 5
+
+# Shop GUI Settings
+gui:
+  # Display item count limit per page
+  items-per-page: 45
+  
+  # Enable favorites feature
+  enable-favorites: true
+  
+  # Enable price history
+  enable-price-history: true
+  
+  # Enable search feature
+  enable-search: true
+
+# Stock Settings
+stock:
+  # Default stock mode: infinite or limited
+  default-mode: infinite
+  
+  # Default stock amount (if mode is limited)
+  default-amount: 1000
+
+# Logging
+logging:
+  # Log all transactions
+  log-transactions: true
+  
+  # Log price changes
+  log-prices: false
+  
+  # Log plugin actions
+  log-actions: true

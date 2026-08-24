@@ -1,0 +1,41 @@
+# ShopPlugin Messages Configuration
+# All messages can be customized here
+
+messages:
+  # General messages
+  no-permission: "§cYou don't have permission to do that!"
+  plugin-disabled: "§cThe shop is currently disabled. Please contact an administrator."
+  
+  # Shop messages
+  shop-opened: "§a[Shop] Opening shop menu..."
+  shop-reloaded: "§a[Shop] Configuration reloaded successfully!"
+  
+  # Buy messages
+  buy-success: "§a[Shop] You bought §f{amount}x {item}§a for §f{price}§a!"
+  buy-not-enough-money: "§c[Shop] You don't have enough money! You need §f{needed}§c but only have §f{balance}§c."
+  buy-out-of-stock: "§c[Shop] This item is out of stock!"
+  
+  # Sell messages
+  sell-success: "§a[Shop] You sold §f{amount}x {item}§a for §f{price}§a!"
+  sell-not-enough-items: "§c[Shop] You don't have that many items to sell!"
+  
+  # Error messages
+  error-invalid-item: "§c[Shop] Invalid item type!"
+  error-invalid-price: "§c[Shop] Invalid price!"
+  error-invalid-amount: "§c[Shop] Invalid amount!"
+  
+  # Admin messages
+  price-set: "§a[Shop] Price set for §f{item}§a: Buy=§f{buy}§a, Sell=§f{sell}"
+  price-reset: "§a[Shop] Prices reset for §f{item}§a!"
+  
+  # GUI
+  gui-title: "Shop"
+  gui-buy-price: "Buy: §a{price}"
+  gui-sell-price: "Sell: §a{price}"
+  gui-dynamic-change: "Change: §c{change}%"
+  gui-stock-infinite: "Stock: §a∞"
+  gui-stock-limited: "Stock: §a{amount}"
+  gui-left-click: "§7Left Click: Buy"
+  gui-right-click: "§7Right Click: Sell"
+  gui-shift-click: "§7Shift + Click: Select Amount"
+  gui-middle-click: "§7Middle Click: Custom Amount"

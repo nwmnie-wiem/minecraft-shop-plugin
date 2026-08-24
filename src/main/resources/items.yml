@@ -1,0 +1,144 @@
+# ShopPlugin Items Configuration
+# Define individual items and their prices
+# If auto-load-items is enabled in config.yml, these are base prices that can be overridden
+
+items:
+  # Ores
+  DIAMOND:
+    category: ores
+    buy-price: 500
+    sell-price: 100
+    min-sell-price: 25
+    max-sell-price: 200
+    stock: infinite
+    dynamic-pricing: true
+  
+  EMERALD:
+    category: ores
+    buy-price: 300
+    sell-price: 75
+    min-sell-price: 20
+    max-sell-price: 150
+    stock: infinite
+    dynamic-pricing: true
+  
+  IRON_ORE:
+    category: ores
+    buy-price: 50
+    sell-price: 10
+    min-sell-price: 2
+    max-sell-price: 30
+    stock: infinite
+    dynamic-pricing: true
+  
+  GOLD_ORE:
+    category: ores
+    buy-price: 100
+    sell-price: 25
+    min-sell-price: 5
+    max-sell-price: 60
+    stock: infinite
+    dynamic-pricing: true
+  
+  # Materials
+  IRON_INGOT:
+    category: materials
+    buy-price: 60
+    sell-price: 15
+    min-sell-price: 5
+    max-sell-price: 40
+    stock: infinite
+    dynamic-pricing: true
+  
+  GOLD_INGOT:
+    category: materials
+    buy-price: 120
+    sell-price: 30
+    min-sell-price: 10
+    max-sell-price: 80
+    stock: infinite
+    dynamic-pricing: true
+  
+  COPPER_INGOT:
+    category: materials
+    buy-price: 40
+    sell-price: 10
+    min-sell-price: 2
+    max-sell-price: 25
+    stock: infinite
+    dynamic-pricing: true
+  
+  # Redstone
+  REDSTONE:
+    category: redstone
+    buy-price: 30
+    sell-price: 7
+    min-sell-price: 2
+    max-sell-price: 20
+    stock: infinite
+    dynamic-pricing: true
+  
+  LAPIS_LAZULI:
+    category: redstone
+    buy-price: 40
+    sell-price: 10
+    min-sell-price: 2
+    max-sell-price: 25
+    stock: infinite
+    dynamic-pricing: true
+  
+  # Blocks
+  STONE:
+    category: blocks
+    buy-price: 2
+    sell-price: 0.5
+    min-sell-price: 0.1
+    max-sell-price: 5
+    stock: infinite
+    dynamic-pricing: true
+  
+  DIRT:
+    category: blocks
+    buy-price: 1
+    sell-price: 0.25
+    min-sell-price: 0.05
+    max-sell-price: 2
+    stock: infinite
+    dynamic-pricing: true
+  
+  SAND:
+    category: blocks
+    buy-price: 2
+    sell-price: 0.5
+    min-sell-price: 0.1
+    max-sell-price: 3
+    stock: infinite
+    dynamic-pricing: true
+  
+  # Food
+  WHEAT:
+    category: food
+    buy-price: 5
+    sell-price: 1
+    min-sell-price: 0.25
+    max-sell-price: 8
+    stock: infinite
+    dynamic-pricing: true
+  
+  BREAD:
+    category: food
+    buy-price: 10
+    sell-price: 2
+    min-sell-price: 0.5
+    max-sell-price: 15
+    stock: infinite
+    dynamic-pricing: true
+  
+  APPLE:
+    category: food
+    buy-price: 15
+    sell-price: 3
+    min-sell-price: 1
+    max-sell-price: 20
+    stock: infinite
+    dynamic-pricing: true

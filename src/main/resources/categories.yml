@@ -1,0 +1,76 @@
+# ShopPlugin Categories Configuration
+# Define shop categories and their properties
+
+categories:
+  blocks:
+    name: "Blocks"
+    display-item: STONE
+    description:
+      - "All building blocks"
+      - "Useful for construction"
+    slot: 0
+    enabled: true
+  
+  construction:
+    name: "Construction"
+    display-item: DIRT
+    description:
+      - "Building and crafting materials"
+    slot: 1
+    enabled: true
+  
+  food:
+    name: "Food"
+    display-item: BREAD
+    description:
+      - "Consumable food items"
+    slot: 2
+    enabled: true
+  
+  tools:
+    name: "Tools"
+    display-item: WOODEN_PICKAXE
+    description:
+      - "Mining and utility tools"
+    slot: 3
+    enabled: true
+  
+  weapons:
+    name: "Weapons"
+    display-item: DIAMOND_SWORD
+    description:
+      - "Combat weapons"
+    slot: 4
+    enabled: true
+  
+  armor:
+    name: "Armor"
+    display-item: DIAMOND_CHESTPLATE
+    description:
+      - "Protective armor"
+    slot: 5
+    enabled: true
+  
+  ores:
+    name: "Ores"
+    display-item: DIAMOND_ORE
+    description:
+      - "Raw ore blocks"
+    slot: 6
+    enabled: true
+  
+  materials:
+    name: "Materials"
+    display-item: IRON_INGOT
+    description:
+      - "Refined materials and resources"
+    slot: 7
+    enabled: true
+  
+  redstone:
+    name: "Redstone"
+    display-item: REDSTONE
+    description:
+      - "Redstone components"
+    slot: 8
+    enabled: true

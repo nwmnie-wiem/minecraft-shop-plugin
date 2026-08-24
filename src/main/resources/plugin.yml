@@ -1,0 +1,40 @@
+name: ShopPlugin
+version: 1.0.0
+main: com.minecraft.shop.ShopPlugin
+description: A modern, efficient, and highly configurable shop plugin for Minecraft
+authors:
+  - nwmnie-wiem
+api-version: '1.21.4'
+
+commands:
+  shop:
+    description: Opens the shop menu
+    usage: /shop
+    permission: shop.use
+  shopadmin:
+    description: Admin commands for the shop
+    usage: /shopadmin
+    permission: shop.admin
+
+permissions:
+  shop.use:
+    description: Allows the player to use the shop
+    default: true
+  shop.buy:
+    description: Allows the player to buy items
+    default: true
+  shop.sell:
+    description: Allows the player to sell items
+    default: true
+  shop.admin:
+    description: Grants access to all admin commands
+    default: op
+  shop.admin.reload:
+    description: Allows reloading the shop configuration
+    default: op
+  shop.admin.prices:
+    description: Allows viewing and modifying prices
+    default: op
+  shop.admin.transactions:
+    description: Allows viewing transaction history
+    default: op

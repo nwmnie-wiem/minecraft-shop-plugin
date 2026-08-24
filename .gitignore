@@ -1,0 +1,30 @@
+# Maven
+target/
+*.jar
+*.war
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+
+# Plugin data
+plugins/
+ShopPlugin/
+*.db
+*.db-journal
+
+# Logs
+logs/
+*.log
