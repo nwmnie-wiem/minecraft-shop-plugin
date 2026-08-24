@@ -25,14 +25,13 @@ public class ShopCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!player.hasPermission("shop.use")) {
-            player.sendMessage("§cYou don't have permission to use the shop!");
+            player.sendMessage("§c[Shop] Nie masz dostępu do sklepu!");
             return true;
         }
 
         if (args.length == 0) {
             // Open main shop menu
-            player.sendMessage("§a[Shop] Opening shop menu...");
-            // TODO: Open GUI menu
+            plugin.getPlayerListener().getShopGUI().openMainMenu(player);
             return true;
         }
 
@@ -41,21 +40,21 @@ public class ShopCommand implements CommandExecutor {
             case "reload":
                 if (player.hasPermission("shop.admin.reload")) {
                     plugin.getConfigManager().reloadConfigs();
-                    player.sendMessage("§a[Shop] Configuration reloaded!");
+                    plugin.getPricingManager().loadPrices();
+                    player.sendMessage("§a[Shop] Konfiguracja przeładowana!");
                 } else {
-                    player.sendMessage("§cYou don't have permission to reload the shop!");
+                    player.sendMessage("§c[Shop] Nie masz uprawnień!");
                 }
                 return true;
             case "search":
                 if (args.length < 2) {
-                    player.sendMessage("§cUsage: /shop search <item>");
+                    player.sendMessage("§cUżycie: /shop search <przedmiot>");
                     return true;
                 }
-                // TODO: Search functionality
-                player.sendMessage("§a[Shop] Searching for: " + args[1]);
+                player.sendMessage("§a[Shop] Szukanie: " + args[1] + " - wkrótce");
                 return true;
             default:
-                player.sendMessage("§cUnknown subcommand!");
+                player.sendMessage("§cNieznana komenda! Użyj: /shop");
                 return true;
         }
     }

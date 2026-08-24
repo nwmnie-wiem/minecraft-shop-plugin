@@ -6,6 +6,8 @@ import com.minecraft.shop.config.ConfigManager;
 import com.minecraft.shop.database.DatabaseManager;
 import com.minecraft.shop.economy.EconomyManager;
 import com.minecraft.shop.listeners.PlayerListener;
+import com.minecraft.shop.pricing.PricingManager;
+import com.minecraft.shop.transaction.TransactionManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ShopPlugin extends JavaPlugin {
@@ -14,6 +16,9 @@ public class ShopPlugin extends JavaPlugin {
     private ConfigManager configManager;
     private DatabaseManager databaseManager;
     private EconomyManager economyManager;
+    private PricingManager pricingManager;
+    private TransactionManager transactionManager;
+    private PlayerListener playerListener;
 
     @Override
     public void onEnable() {
@@ -50,13 +55,22 @@ public class ShopPlugin extends JavaPlugin {
         }
         getLogger().info("✓ Economy manager initialized");
 
+        // Initialize pricing manager
+        pricingManager = new PricingManager(this);
+        getLogger().info("✓ Pricing manager initialized");
+
+        // Initialize transaction manager
+        transactionManager = new TransactionManager(this);
+        getLogger().info("✓ Transaction manager initialized");
+
         // Register commands
         getCommand("shop").setExecutor(new ShopCommand(this));
         getCommand("shopadmin").setExecutor(new ShopAdminCommand(this));
         getLogger().info("✓ Commands registered");
 
         // Register listeners
-        getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
+        playerListener = new PlayerListener(this);
+        getServer().getPluginManager().registerEvents(playerListener, this);
         getLogger().info("✓ Event listeners registered");
 
         getLogger().info("======================================");
@@ -86,5 +100,17 @@ public class ShopPlugin extends JavaPlugin {
 
     public EconomyManager getEconomyManager() {
         return economyManager;
+    }
+
+    public PricingManager getPricingManager() {
+        return pricingManager;
+    }
+
+    public TransactionManager getTransactionManager() {
+        return transactionManager;
+    }
+
+    public PlayerListener getPlayerListener() {
+        return playerListener;
     }
 }
