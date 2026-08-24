@@ -44,8 +44,7 @@ public class AmountSelectorGUI {
         ItemStack button = new ItemStack(Material.PAPER, Math.min(amount, 64));
         ItemMeta meta = button.getItemMeta();
 
-        meta.displayName(Component.text("§6[" + amount + "x]")
-            .color(NamedTextColor.YELLOW));
+        meta.displayName(Component.text("§6[" + amount + "x]").color(NamedTextColor.YELLOW));
 
         List<Component> lore = new ArrayList<>();
         lore.add(Component.text("Kliknij aby wybrać").color(NamedTextColor.GRAY));
