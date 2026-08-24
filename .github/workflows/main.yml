@@ -25,7 +25,7 @@ jobs:
       run: mvn clean package -DskipTests
     
     - name: Upload JAR as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ShopPlugin-JAR
         path: target/ShopPlugin-1.0.0.jar
